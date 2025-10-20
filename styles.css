@@ -1,0 +1,224 @@
+:root {
+  --bg-color: #0d1117;
+  --card-color: #161b22;
+  --text-color: #e6edf3;
+  --accent-color: #58a6ff;
+  --border-color: #30363d;
+}
+
+/* Light mode colors */
+body.light {
+  --bg-color: #f9f9f9;
+  --card-color: #ffffff;
+  --text-color: #1a1a1a;
+  --accent-color: #005cc5;
+  --border-color: #d0d7de;
+}
+
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+header { 
+    text-align: center; 
+    padding: 2rem 1rem 1rem; 
+    background: var(--card-color); 
+    border-bottom: 1px solid var(--border-color); 
+    position: relative; 
+}
+
+header img { 
+    width: 140px; 
+    height: 140px; 
+    border-radius: 50%; 
+    border: 3px solid var(--accent-color); 
+    object-fit: cover; 
+}
+
+header h1 { 
+    margin-top: 1rem; 
+    font-size: 1.8rem; 
+    color: var(--accent-color); 
+}
+
+main { 
+    max-width: 800px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+
+section { 
+    background: var(--card-color); 
+    border: 1px solid var(--border-color); 
+    border-radius: 10px; 
+    padding: 1.5rem; 
+    margin-bottom: 1.5rem; 
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.05); 
+    transition: background 0.4s ease, border 0.4s ease; 
+}
+
+h2 { 
+    color: var(--accent-color); 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 0.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.skills-list { 
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.skills-list li { 
+    background: var(--bg-color); 
+    border: 1px solid var(--border-color); 
+    padding: 10px 14px; 
+    border-radius: 6px; 
+    font-size: 1rem; 
+    text-align: center; 
+}
+
+.contact-info a { 
+    color: var(--accent-color); 
+    text-decoration: none; 
+}
+
+.contact-info a:hover { 
+    text-decoration: underline; 
+}
+
+form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+input, textarea { 
+    padding: 10px; 
+    border-radius: 6px; 
+    border: 1px solid var(--border-color); 
+    background: var(--bg-color); 
+    color: var(--text-color); 
+    font-size: 1rem; 
+    transition: background 0.4s ease, color 0.4s ease; 
+}
+
+input:focus, textarea:focus { 
+    outline: none; 
+    border-color: var(--accent-color); 
+    box-shadow: 0 0 5px var(--accent-color); 
+}
+
+button { 
+    background: var(--accent-color); 
+    color: var(--bg-color); 
+    border: none; 
+    padding: 10px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: background 0.3s ease; 
+}
+
+button:hover { 
+    background: #1f6feb; 
+}
+
+footer { 
+    text-align: center; 
+    padding: 1rem; 
+    color: var(--text-color); 
+    font-size: 0.9rem; 
+    border-top: 1px solid var(--border-color); 
+    background: var(--card-color); 
+    transition: background 0.4s ease; 
+}
+
+/* Toggle Button */ 
+.toggle-theme { 
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    background: none; 
+    border: 1px solid var(--border-color); 
+    color: var(--accent-color); 
+    padding: 8px 12px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: all 0.3s ease; 
+}
+
+.toggle-theme:hover { 
+    background: var(--accent-color); 
+    color: var(--bg-color); 
+}
+
+/* Responsive Design */ 
+@media (max-width: 600px) { 
+    header img { 
+        width: 110px; 
+        height: 110px; 
+    } 
+    main { 
+        margin: 1rem auto; 
+    } 
+} 
+
+/* ===== Projects Section ===== */
+#projects {
+    margin-top: 2rem;
+  }
+
+  .project-card {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.05);
+  }
+
+  .project-card h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+  }
+
+  .project-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .project-gallery img {
+    width: 48%;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+
+  .view-more-link {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+  }
+
+  .view-more-link:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+  }
+</style>
